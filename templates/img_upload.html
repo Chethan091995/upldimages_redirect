@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE UPLOADING</title>
+</head>
+<body>
+    
+        <form action="{% url 'myapp:img_display' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            Image1:<input type="file" name="sample1" id="sample1"><br>
+            Image2:<input type="file" name="sample2" id="sample2">
+            <input type="submit" value="Submit">
+        </form>
+      
+</body>
+</html>
